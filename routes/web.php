@@ -33,4 +33,18 @@ Route::get('/askme', function () { return view('whoami'); });
 
 Route::post('/dologin','LoginController@index');
 Route::get('/login',function(){return view('login');});
+Route::get('/login2', function ()
+{
+    return view('login2');
+});
+
+Route::get('/login3', function(){
+    return view('login3');
+});
+
+Route::post('/dologin3','Login3Controller@index');
+
+Route::get('/createCustomer','customerController@addCustomer');
+Route::get('/order','customerController@order');
+
 

@@ -22,21 +22,13 @@ class LoginController extends Controller
         $data = ['username' => $username, 'password' => $password];
 
         if(SecurityService::login($user)){
-            return view("loginPassed")->with($data);
+            return view("loginPassed2")->with($data);
         }
         else{
             return view("loginFailed");
         }
 
-
-        //echo "Welcome back " . $username;
-        //echo '<br>';
-
-
-
-
-        //returns login view
-        //return view('thatswhoiam')->with($data);
-
     }
+
+
 }
